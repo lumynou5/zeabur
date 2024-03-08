@@ -10,7 +10,7 @@ import { Callout } from 'nextra-theme-docs'
 
 雖然 Zeabur 已經涵蓋眾多由社群提供的 Prebuilt 範本（Prebuilt Marketplace），
 你可能會需要部署自己的 Docker image、配置 Stateful 的服務（儲存空間），或者是
-使用更進階的環境變數功能（如曝露某個變數給其他服務）。
+使用更進階的環境變數功能（如暴露某個變數給其他服務）。
 
 Zeabur 針對這個需求，提供了 Prebuilt 的自訂功能。
 
@@ -74,11 +74,11 @@ Zeabur 針對這個需求，提供了 Prebuilt 的自訂功能。
 - **Data Path**：Prebuilt 要持續留存資料的路徑。
   留空就不會開這個空間，減少留存資料的效能損耗。
 - **Image**：Prebuilt 服務的 Docker image 引用，如 `mariadb:11`。
-- **Ports**：要向公網或其他服務對外曝露的連線埠。
+- **Ports**：要向公網或其他服務對外暴露的連線埠。
     - Port Name 是用來標示這個連線埠的名稱。只能使用英文、數字和連接號 (hyphen)。
     - Port Type 是連線埠的類型，目前支援 TCP、UDP 和 HTTP。
         - 只有 HTTP 才能綁到網域上。
 - **Environment Variables**：環境變數
-    - 可以選擇曝露給其他服務 (Expose) 或不可修改 (Readonly)
+    - 可以選擇暴露給其他服務 (Expose) 或不可修改 (Readonly)
     - 環境變數的名稱只能使用英文、數字和底線 (underscore)。
-    - 可使用 `${VARIABLE}` 語法引用其他曝露的環境變數或 [特殊變數 (special variable)](./special-variables)。
+    - 可使用 `${VARIABLE}` 語法引用其他暴露的環境變數或 [特殊變數 (special variable)](./special-variables)。

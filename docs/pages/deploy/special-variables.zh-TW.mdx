@@ -36,7 +36,7 @@ Git 和 Prebuilt 服務均可使用。
   - 例如 `test.zeabur.app`。
   - 這個 URL 是你在「網域」裡面設定的。
 - `${CONTAINER_HOSTNAME}`：目前服務在 Zeabur 專案內的主機名稱（hostname）
-    - 通常我們會建立一個有 Expose（向專案曝露）屬性的環境變數（如 `${MYSQL_HOST}`），
+    - 通常我們會建立一個有 Expose（向專案暴露）屬性的環境變數（如 `${MYSQL_HOST}`），
       然後將 `${CONTAINER_HOSTNAME}` 的值填入這個環境變數。
     - 不過假如你是要在 Zeabur 內引用其他服務的 hostname，更推薦使用 Zeabur 未來將推出的 DNS 功能。
 - `${[埠名稱]_PORT}`：在 Prebuilt 服務裡面定義的連線埠
