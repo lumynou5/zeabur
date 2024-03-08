@@ -30,11 +30,11 @@ bun init
 
 打開 `index.ts` 並貼上以下程式碼片段，該片段使用 `Bun.serve` 實作簡單的 HTTP 伺服器。
 
-請確保在 `serve` 函數中將 `port` 設為 `Bun.env.PORT`，以確保應用程式能夠使用 Zeabur 提供的 `PORT` 環境變數監聽正確的埠。
+請確保在 `serve` 函數中將 `port` 設為 `Bun.env.PORT`，以確保應用程式能夠使用 Zeabur 提供的 `PORT` 環境變數監聽正確的連線埠。
 
 ```typescript filename="index.ts" {2}
 const server = Bun.serve({
-  port: Bun.env.PORT ?? 3000, // 將埠設為 `Bun.env.PORT`。
+  port: Bun.env.PORT ?? 3000, // 將連線埠設為 `Bun.env.PORT`。
   fetch() {
     return new Response("Bun on Zeabur!");
   },
